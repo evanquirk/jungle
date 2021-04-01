@@ -4,18 +4,21 @@
     <h2>Admin &raquo; Dashboard</h2>
   </header>
 
-  <div class="counts">
-    <div class="counts-section">
-      <h3><%= @products_count %></h3>
-      <h4><%=link_to "Total Products", [:admin, :products] %></h4>
-    </div>
-
-    <div class="counts-section">
-      <h3><%= @categories_count %></h3>
-      <h4><%=link_to "Total Categories", [:admin, :products] %></h4>
-    </div>
+  <div class="stats-table">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th><%=link_to "Total Products", [:admin, :products] %></th>
+          <th><%=link_to "Total Categories", [:admin, :products] %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @products_count %></td>
+          <td><%= @categories_count %></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   </section>
-
-
